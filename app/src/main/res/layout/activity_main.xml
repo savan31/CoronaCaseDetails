@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceff1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#eceff1"
+           android:orientation="vertical">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:padding="8dp">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:weightSum="2">
+                   <org.eazegraph.lib.charts.PieChart
+                       android:id="@+id/piechart"
+                       android:layout_width="match_parent"
+                       android:layout_weight="1"
+                       android:layout_height="200dp"
+                       android:padding="10dp"
+                       app:egFixedBarWidth="true"
+                       app:egBarWidth="20dp"
+                       app:egLegendHeight="40dp"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_gravity="center"
+                       android:orientation="vertical">
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:drawableLeft="@drawable/ic_red"
+                           android:text="Total Confirmed Case"
+                           android:textSize="15dp"
+                           android:layout_margin="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textAlignment="center"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:drawableLeft="@drawable/ic_green"
+                           android:text="Total Recovered Case"
+                           android:textSize="15dp"
+                           android:layout_margin="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textAlignment="center"/>
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:drawableLeft="@drawable/ic_gray"
+                           android:text="Total Deceased Case"
+                           android:textSize="15dp"
+                           android:layout_margin="8dp"
+                           android:textColor="@color/colorBlack"
+                           android:textAlignment="center"/>
+                   </LinearLayout>
+               </LinearLayout>
+           </androidx.cardview.widget.CardView>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:background="@drawable/box"
+               android:orientation="vertical"
+               android:padding="8dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:text="Confirmed Case"
+                   android:textAlignment="center"
+                   android:textColor="@color/colorRed"
+                   android:textSize="18dp" />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/colorBlack" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:orientation="horizontal">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/box"
+                       android:layout_marginRight="2dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Total Confirmed Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorRed"
+                           android:textSize="15dp" />
+
+                       <TextView
+                           android:id="@+id/totalCC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Confirmed Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorRed"
+                           android:textSize="18dp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/box"
+                       android:layout_marginLeft="2dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Today Confirme Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorRed"
+                           android:textSize="15dp" />
+
+                       <TextView
+                           android:id="@+id/todayCC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Confirmed Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorRed"
+                           android:textSize="18dp" />
+                   </LinearLayout>
+               </LinearLayout>
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:background="@drawable/box"
+               android:orientation="vertical"
+               android:padding="8dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:text="Recovere Case"
+                   android:textAlignment="center"
+                   android:textColor="@color/colorGreen"
+                   android:textSize="18dp" />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/colorBlack" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:orientation="horizontal">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/box"
+                       android:layout_marginRight="2dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Total Recovered Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGreen"
+                           android:textSize="15dp" />
+
+                       <TextView
+                           android:id="@+id/totalRC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Recovered Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGreen"
+                           android:textSize="18dp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/box"
+                       android:layout_marginLeft="2dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Today Recovered Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGreen"
+                           android:textSize="15dp" />
+
+                       <TextView
+                           android:id="@+id/todayRC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Recovered Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGreen"
+                           android:textSize="18dp" />
+                   </LinearLayout>
+               </LinearLayout>
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:background="@drawable/box"
+               android:orientation="vertical"
+               android:padding="8dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:text="Deceased Case"
+                   android:textAlignment="center"
+                   android:textColor="@color/colorGray"
+                   android:textSize="18dp" />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/colorBlack" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:orientation="horizontal">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/box"
+                       android:layout_marginRight="2dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Total Deceased Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGray"
+                           android:textSize="15dp" />
+
+                       <TextView
+                           android:id="@+id/totalDC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Confirmed Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGray"
+                           android:textSize="18dp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="@drawable/box"
+                       android:layout_marginLeft="2dp"
+                       android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Today Decease Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGray"
+                           android:textSize="15dp" />
+
+                       <TextView
+                           android:id="@+id/todayDC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_margin="5dp"
+                           android:text="Confirmed Case"
+                           android:textAlignment="center"
+                           android:textColor="@color/colorGray"
+                           android:textSize="18dp" />
+                   </LinearLayout>
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/btn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Track Country"
+               android:textSize="15dp"
+               android:background="@drawable/box"
+               android:layout_margin="8dp"/>
+
+
+       </LinearLayout>
+   </ScrollView>
+
+</LinearLayout>

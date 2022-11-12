@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AllCountryData">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="4"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Country"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:gravity="center"
+            android:background="@drawable/countrybox"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Confirmed Cases"
+            android:textStyle="bold"
+            android:textColor="@color/colorRed"
+            android:background="@drawable/countrybox"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Recover Cases"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
+            android:background="@drawable/countrybox"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Deaths   Cases"
+            android:textStyle="bold"
+            android:textColor="@color/colorGray"
+            android:background="@drawable/countrybox"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
